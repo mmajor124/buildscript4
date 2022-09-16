@@ -1,0 +1,10 @@
+1.  Jon Snow
+2.  Daenerys Targaryen
+3.  Sansa Stark
+4.  Arya Stark
+5.  Jaime Lannister
+6.  Tyrion Lannister
+7.  Cersei Lannister
+8.  Petyr Baelish
+9.  Eddard Stark
+10. Jaqen H'ghar
