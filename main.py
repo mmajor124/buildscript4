@@ -1,22 +1,23 @@
-# Python program to demonstrate
-# sys.argv
+#Date - 9/15/22 
+#Build Script 4
+#Description - This is a complimentary script to the bash script, buildscript4va.sh.  This script imports the API data as json and converts it to the downloaded .csv file.
+#author: Mike Major
+
+#Imports json, sys, and csv modules into existing script.  This will make it easaier for specific data types to be converted.
 import json
 import sys
 import csv
 
-#print("This is the name of the program:", sys.argv[1])
-
-#print("Argument List:", str(sys.argv))
-
+#Converts the json string to a dictionary.
 dictgot=json.loads(sys.argv[1])
-print(dictgot)
+#Stores selected Game of Thrones character data.
 gotindex={}
 
-
-#My Game of Thrones dictionary
+print(dictgot)
+#If the length of the dictionary list exceeds 1, then remove the first listed dictionary.  This was done due to an error with Daenerys Targaryen.  
 if len(dictgot) > 1 : 
     dictgot.pop(0)
-#gotindex.update({"name" == dictgot["name"]})
+#Extract specific API values from the indexed variable.
 gotindex['name'] = dictgot[0]['name']
 gotindex['gender'] = dictgot[0]['gender']
 gotindex['born'] = dictgot[0]['born']
@@ -29,7 +30,7 @@ print(gotindex)
 
 #with open(gotindex) as json_file:
 	#gotjson = json.load(json_file)
-
+#Uses the csv module to write to the csv file named "got.csv"
 gotdata = open('/home/jax/Desktop/got.csv', 'w', newline='')
 csv_writer = csv.writer(gotdata)
 
